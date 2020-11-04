@@ -1,0 +1,27 @@
+table {
+  width: 100%;
+  margin: 25px 0;
+
+  }
+  .gridContainer {
+    padding-top: 4px;
+    padding-left: 4px;
+    margin: 15px;
+  }
+  .btnClass {
+    background: #ccc;
+    border: 2px solid rgb(253, 253, 253);
+    padding: 8px 25px;
+    border-radius: 25px;
+
+   position: relative;
+}
+  .table-header {
+    background: rgb(110, 106, 106);
+    color: white;
+}
+
+.btnClass:focus, .btnClass:hover
+, .btnClass:active{
+  outline: none !important;
+}

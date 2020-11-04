@@ -1,0 +1,69 @@
+<div class="modal-content">
+    <div id="cover-spin" *ngIf="loaderPage"></div>
+    <div class="modal-header">
+        <h2 class="modal-title">{{popupLabel}} Product </h2>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="addEditDialogForm">
+            <div class="row">
+                <div class="col-md-12">
+
+
+
+
+                    
+                    <mat-form-field appearance="fill">
+                        <mat-label>City</mat-label>
+                        <input matInput placeholder="Enter City" formControlName="city">
+                    </mat-form-field>
+
+                    <mat-form-field color="accent" appearance="fill">
+                        <mat-label>Start Date</mat-label>
+                        <input matInput [matDatepicker]="picker1" formControlName="start_date">
+                        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                        <mat-datepicker #picker1></mat-datepicker>
+                    </mat-form-field>
+
+                    <mat-form-field color="accent" appearance="fill">
+                        <mat-label>End Date</mat-label>
+                        <input matInput [matDatepicker]="picker2" formControlName="end_date">
+                        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                        <mat-datepicker #picker2 color="primary"></mat-datepicker>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Price</mat-label>
+                        <input matInput placeholder="Enter price" formControlName="price">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Status</mat-label>
+                        <input matInput placeholder="Enter Status" formControlName="status">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Color</mat-label>
+                        <input matInput placeholder="Enter Color" formControlName="color">
+                    </mat-form-field>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <div class="row" style="width: 100%;">
+            <div mat-dialog-actions style="width: 100%;">
+
+                <!-- [disabled]="addEditDialogForm.invalid" -->
+                <div class="col-md-6">
+                    <button class="submit-btn popupButton" color="accent" (click)="addEditFun()"
+                        [disabled]="addEditDialogForm.invalid"> {{popupBtnLabel}} </button>
+                </div>
+                <div class="col-md-6">
+                    <button class="cancel-btn popupButton" [mat-dialog-close]>
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
